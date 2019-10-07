@@ -1,0 +1,18 @@
+service: email-notification-service
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: eu-west-1
+  stage: production
+  environment: ${file(env.yml):${self:provider.stage}}
+
+functions:
+  send:
+    handler: handler.send
+    events:
+      - http:
+          path: /send
+          method: get
+          cors: true
+  
