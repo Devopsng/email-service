@@ -1,6 +1,3 @@
-/**
- * Created by aakinpelu<aakinpelu@terragonltd.com> on 30/10/17.
- */
 const unirest = require('unirest');
 const nodemailer = require('nodemailer');
 const AWS = require("aws-sdk");
